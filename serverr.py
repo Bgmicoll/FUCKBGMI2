@@ -5,12 +5,11 @@ import subprocess
 import datetime
 import os
 
-from pymongo import MongoClient
 
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-MONGO_URI = 'mongodb+srv://piroop:piroop@piro.hexrg9w.mongodb.net/?retryWrites=true&w=majority&appName=piro&tlsAllowInvalidCertificates=true'
+
 bot = telebot.TeleBot('7390467480:AAE_4Qs_gRz07ErmS2F5-UULch4uU0sNKeE')
 
 # Admin user IDs
@@ -21,10 +20,6 @@ USER_FILE = "users.txt"
 
 # File to store command logs
 LOG_FILE = "log.txt"
-
-
-
-client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 
 
